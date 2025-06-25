@@ -14,11 +14,13 @@ public class PlayerController : MonoBehaviour
     Vector3 moveDirection = Vector3.zero;
     int targetLane;
 
-    public float gravity;
     public float speedZ;
-    public float speedX;
-    public float speedJump;
     public float accelerationZ;
+
+    public float speedX;
+
+    public float speedJump;
+    public float gravity;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +34,11 @@ public class PlayerController : MonoBehaviour
     {
         if (controller.isGrounded)
         {
-            if (Input.GetKeyDown("left"))
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 MoveToLeft();
             }
-            if (Input.GetKeyDown("right"))
+            if (Input.GetKeyDown(KeyCode.D))
             {
                 MoveToRight();
             }
@@ -47,6 +49,8 @@ public class PlayerController : MonoBehaviour
         }
 
         // 前進ベロシティの計算
+        // FPSはハード毎に異なるので経過時間を使って移動先を計算する
+        // Clampで値の範囲を設定する
         float acceleratedZ = moveDirection.z + (accelerationZ * Time.deltaTime);
         moveDirection.z = Mathf.Clamp(accelerationZ, 0, speedZ);
 
@@ -58,8 +62,13 @@ public class PlayerController : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
 
         // 移動実行
-        Vector3 globalDirection = transform.TransformDirection(moveDirection);
-        controller.Move(globalDirection * Time.deltaTime);
+        // transformのRotationを考慮して移動先の座標を変換する
+        //Vector3 globalDirection = transform.TransformDirection(moveDirection);
+        //controller.Move(globalDirection * Time.deltaTime);
+
+        // 移動実行
+        // 今回のように主体が回転しない場合はこれでいい
+        controller.Move(moveDirection * Time.deltaTime);
 
         if (controller.isGrounded)
         {
@@ -69,6 +78,7 @@ public class PlayerController : MonoBehaviour
         //animator.SetBool("run", moveDirection.z > 0.0f);
     }
 
+    // レーン番号変更
     public void MoveToLeft()
     {
         if (targetLane > MinLane)
@@ -77,6 +87,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // レーン番号変更
     public void MoveToRight()
     {
         if (targetLane < MaxLane)
@@ -85,6 +96,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // 移動先Y座標変更
     public void Jump()
     {
         moveDirection.y = speedJump;
