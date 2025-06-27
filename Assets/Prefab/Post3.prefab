@@ -222,7 +222,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.7058824, g: 0.5294118, b: 0.3137255, a: 1}
+      minColor: {r: 0.98039216, g: 0.11764706, b: 0.23529412, a: 1}
       maxColor: {r: 0.16862746, g: 0.22745098, b: 0.17548902, a: 1}
       maxGradient:
         serializedVersion: 2
@@ -4959,7 +4959,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 71d673685f2536d429f9ee47c8dcd21f, type: 2}
+  - {fileID: 2100000, guid: 098b313029b361e4388937490e35ac70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5225,7 +5225,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.7058824, g: 0.5294118, b: 0.3137255, a: 1}
+      minColor: {r: 0.98039216, g: 0.11764706, b: 0.23529412, a: 1}
       maxColor: {r: 0.1717344, g: 0.22745098, b: 0.16862746, a: 1}
       maxGradient:
         serializedVersion: 2
@@ -10229,7 +10229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3cb782b5f35d0e4aaba53d73347e8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 2
   getPoint: 50
   pointText: {fileID: 1724526508667183252}
   pointUI: {fileID: 683000420926104554}
@@ -10337,7 +10337,7 @@ GameObject:
   - component: {fileID: 6358571247333261520}
   - component: {fileID: 4650657974085439892}
   m_Layer: 0
-  m_Name: Post1
+  m_Name: Post3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10554,7 +10554,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.78431374, g: 0.5882353, b: 0.09732112, a: 1}
+      maxColor: {r: 0.98039216, g: 0.11764706, b: 0.23529412, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

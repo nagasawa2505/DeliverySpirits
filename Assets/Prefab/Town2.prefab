@@ -149,7 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3542899373626576891}
   m_Layer: 0
-  m_Name: Town1
+  m_Name: Town2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1046,7 +1046,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5051282096509378112, guid: 32e1e79f6605c1242a465efad631fc8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18
+      value: 20.25
       objectReference: {fileID: 0}
     - target: {fileID: 5051282096509378112, guid: 32e1e79f6605c1242a465efad631fc8a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1108,7 +1108,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3956792818570144141, guid: 8a987f17438767f4b8e458bfaa56b8be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.5
+      value: 12.13
       objectReference: {fileID: 0}
     - target: {fileID: 3956792818570144141, guid: 8a987f17438767f4b8e458bfaa56b8be, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1170,7 +1170,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3956792818570144141, guid: 4c79118a62c93ff4dba7579296d9b379, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.5
+      value: 9.4
       objectReference: {fileID: 0}
     - target: {fileID: 3956792818570144141, guid: 4c79118a62c93ff4dba7579296d9b379, type: 3}
       propertyPath: m_LocalPosition.y

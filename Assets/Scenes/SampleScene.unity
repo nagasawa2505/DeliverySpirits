@@ -229,10 +229,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2729491650004005147, guid: 0a7f12fd8668b694ea58adc8db2eed87, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 22.445923
-      objectReference: {fileID: 0}
     - target: {fileID: 3542899373626576891, guid: 0a7f12fd8668b694ea58adc8db2eed87, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -434,6 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageChips:
   - {fileID: 1788391746}
+  - {fileID: 3831112722021273285, guid: 2c89653c6f883eb49b4fe82be109d101, type: 3}
   startChipIndex: 1
   preInstantiate: 5
   generatedStageList:
@@ -518,6 +515,10 @@ PrefabInstance:
     - target: {fileID: 1381604137763300222, guid: 0a7f12fd8668b694ea58adc8db2eed87, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729491650004005147, guid: 0a7f12fd8668b694ea58adc8db2eed87, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -6.524658
       objectReference: {fileID: 0}
     - target: {fileID: 2729491650004005147, guid: 0a7f12fd8668b694ea58adc8db2eed87, type: 3}
       propertyPath: m_AnchoredPosition.y
