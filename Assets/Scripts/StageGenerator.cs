@@ -25,6 +25,11 @@ public class StageGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null)
+        {
+            return;
+        }
+
         int positionIndex = (int)(player.position.z / StageChipSize);
         if (positionIndex + preInstantiate > currentChipIndex)
         {

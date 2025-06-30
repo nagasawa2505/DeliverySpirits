@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    const int MinLane = -2;
-    const int MaxLane = 2;
-    const float LaneWidth = 1.0f;
+    public const int MinLane = -1;
+    public const int MaxLane = 1;
+    public const float LaneWidth = 3.0f;
 
     CharacterController controller;
     //Animator animator;
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (controller.isGrounded)
+        if (controller.isGrounded && GameController.gameState == GameState.playing)
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
@@ -76,6 +76,17 @@ public class PlayerController : MonoBehaviour
         }
 
         //animator.SetBool("run", moveDirection.z > 0.0f);
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("Danger"))
+        {
+            controller.Move(new Vector3(0, 5, 0));
+            controller.transform.Rotate(Random.Range(-45, 45), Random.Range(-45, 45), Random.Range(-45, 45));
+            GameController.gameState = GameState.gameover;
+            Destroy(gameObject, 3.0f);
+        }
     }
 
     // ƒŒ[ƒ“”Ô†•ÏX

@@ -28,6 +28,11 @@ public class Shooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameController.gameState != GameState.playing)
+        {
+            return;
+        }
+
         // ç∂ÉNÉäÉbÉN
         if (startShoot && Input.GetMouseButton(0))
         {
