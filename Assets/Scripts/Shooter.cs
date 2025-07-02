@@ -10,9 +10,12 @@ public class Shooter : MonoBehaviour
     float shootSpeed = 100f; // 投げるときの水平方向の力
     float upSpeed = 80f; // 投げるときの上向きの力
     bool startShoot; // 今投げてOKか
+    bool switching;
 
     Camera cam;
     Transform player;
+
+    public static int[] shootCounts = { 0, 0, 0 };
 
     // Start is called before the first frame update
     void Start()
@@ -40,20 +43,29 @@ public class Shooter : MonoBehaviour
         }
 
         // 右クリック
-        if (Input.GetMouseButton(1))
+        if (!switching && Input.GetMouseButton(1))
         {
+            switching = true;
+
             // 投げる箱の切り替え
             boxNum++;
             if (boxNum == boxPrefabs.Length)
             {
                 boxNum = 0;
             }
+
+            Invoke("UnsetSwitching", 0.2f);
         }
     }
 
     void ShootEnabled()
     {
         startShoot = true;
+    }
+
+    void UnsetSwitching()
+    {
+        switching = false;
     }
 
     void Shoot()
@@ -74,6 +86,8 @@ public class Shooter : MonoBehaviour
             cam.transform.forward.x * shootSpeed,
             cam.transform.forward.y + upSpeed,
             cam.transform.forward.z * shootSpeed), ForceMode.Impulse);
+
+        shootCounts[boxNum]++;
 
         Invoke("ShootEnabled", 1f);
     }

@@ -10173,7 +10173,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e0a86e8a8356aa6439f0f7bb927d1bf3, type: 2}
+  - {fileID: 2100000, guid: 1f6925fa071a1b245b0f1c037392dbc6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10230,7 +10230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  getPoint: 50
+  getPoint: 70
   pointText: {fileID: 1724526508667183252}
   pointUI: {fileID: 683000420926104554}
 --- !u!114 &683000420926104554
@@ -10284,8 +10284,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.524719, y: 52.311615}
-  m_SizeDelta: {x: -1013.04944, y: -504.62323}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2287313937304431108
 CanvasRenderer:
@@ -10352,7 +10352,7 @@ Transform:
   m_GameObject: {fileID: 6906544695847037179}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.45, y: 0, z: 31.26}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15287,10 +15287,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 490237587500204750}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -66, y: -166}
+  m_SizeDelta: {x: 360, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6817906434558340591
 CanvasRenderer:

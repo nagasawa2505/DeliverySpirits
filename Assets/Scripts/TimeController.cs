@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimeController : MonoBehaviour
 {
-    public float startTime = 30.0f;
+    public float startTime = 60.0f;
     public float displayTime; // UI‚Æ˜A“®‚·‚éc‚èŠÔ
     float pastTime; // Œo‰ßŠÔ
     bool isTimeOver;

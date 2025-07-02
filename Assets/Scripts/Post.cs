@@ -19,6 +19,8 @@ public class Post : MonoBehaviour
 
     public PointUI pointUI; // ポイント表示UI制御
 
+    public static int[] successCounts = { 0, 0, 0 };  // 配達成功数
+
     private void OnTriggerEnter(Collider other)
     {
         if (posted)
@@ -31,19 +33,19 @@ public class Post : MonoBehaviour
             case PostType.box1:
                 if (other.gameObject.CompareTag("Box1"))
                 {
-                    PostComp();
+                    PostComp(0);
                 }
                 break;
             case PostType.box2:
                 if (other.gameObject.CompareTag("Box2"))
                 {
-                    PostComp();
+                    PostComp(1);
                 }
                 break;
             case PostType.box3:
                 if (other.gameObject.CompareTag("Box3"))
                 {
-                    PostComp();
+                    PostComp(2);
                 }
                 break;
             default:
@@ -51,9 +53,12 @@ public class Post : MonoBehaviour
         }
     }
 
-    void PostComp()
+    void PostComp(int boxNum)
     {
         posted = true;
+
+        // 箱別の配達成功数加算
+        successCounts[boxNum]++;
 
         // ポイント加算
         GameController.stagePoints += getPoint;

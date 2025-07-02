@@ -65,9 +65,8 @@ public class StageGenerator : MonoBehaviour
     {
         int nextStageChip = Random.Range(0, stageChips.Length);
 
-        GameObject stageObject = Instantiate(stageChips[nextStageChip], new Vector3(0, 0, chipIndex * StageChipSize), Quaternion.identity);
-
-        return stageObject;
+    // stageChips[0] NULL!!!
+        return Instantiate(stageChips[nextStageChip], new Vector3(0, 0, chipIndex * StageChipSize), Quaternion.identity);
     }
 
     // 一番古いステージを削除

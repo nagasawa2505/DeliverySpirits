@@ -82,6 +82,11 @@ public class PlayerController : MonoBehaviour
     {
         if (hit.gameObject.CompareTag("Danger"))
         {
+            Debug.Log("Danger!!");
+            if (GameController.gameState == GameState.end)
+            {
+                return;
+            }
             controller.Move(new Vector3(0, 5, 0));
             controller.transform.Rotate(Random.Range(-45, 45), Random.Range(-45, 45), Random.Range(-45, 45));
             GameController.gameState = GameState.gameover;

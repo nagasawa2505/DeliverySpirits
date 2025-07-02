@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Danger : MonoBehaviour
 {
-    public float dangerSpeed = 10.0f;
+    public float dangerSpeed = 20.0f;
 
     // Start is called before the first frame update
     void Start()
