@@ -15,7 +15,8 @@ public class ChangeScene : MonoBehaviour
             Post.successCounts[i] = 0;
             Shooter.shootCounts[i] = 0;
         }
-Debug.Log("LoadScene");
+
+        //SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         SceneManager.LoadScene(sceneName);
     }
 }
